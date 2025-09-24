@@ -36,3 +36,79 @@ header {
   height: 80px;
  z-index: 1000;
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 30px;
+  height: 25px;
+  justify-content: center;
+  position: relative;
+ z-index: 1000;
+}
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #ff3e7f;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+}
+.mobile-menu a {
+  color: white;
+  padding: 0.5rem 0;
+  z-index: 1000;
+}
+
+/* Conteúdo *\
+
+main {
+  scroll-behavior: smooth;
+}
+.pagina {
+  min-height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
