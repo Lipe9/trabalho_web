@@ -7,6 +7,10 @@
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+nav {
+  display: flex;
+  gap: 1rem;
+}
 nav a {
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -83,14 +87,11 @@ header {
   top: 10px;
   transform: rotate(-45deg);
 }
-.mobile-menu {
+.mobile-menu{
   display: none;
   flex-direction: column;
-  background: #ff3e7f;
   position: fixed;
   top: 80px;
-  left: 0;
-  width: 100%;
   padding: 1rem;
   z-index: 1000;
 }
@@ -99,9 +100,6 @@ header {
   padding: 0.5rem 0;
   z-index: 1000;
 }
-
-/* Conteúdo *\
-
 main {
   scroll-behavior: smooth;
 }
@@ -111,4 +109,21 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+#home{
+  background-color: black;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .mobile-menu.active {
+    display: flex;
+  }
 }
