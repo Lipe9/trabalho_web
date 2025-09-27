@@ -65,22 +65,32 @@
 .btn-comprar:hover {
   background: Orange;
 }
-#produto > h2 {
+
+#produto .titulo-produtos {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2c7;
+  color: orange; /* combina com o header */
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  /* animação */
+  /* animação de entrada */
   opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInDown 1s ease forwards;
+  transform: translateY(-30px);
+  animation: slideDown 1s ease forwards;
 }
-@keyframes fadeInDown {
+
+/* Efeito ao passar o mouse no título */
+#produto .titulo-produtos:hover {
+  color: black;
+  text-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+  transition: 0.3s ease;
+}
+
+/* Keyframes */
+@keyframes slideDown {
   to {
     opacity: 1;
     transform: translateY(0);
