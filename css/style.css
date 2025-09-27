@@ -104,9 +104,9 @@ header {
   padding: 0.9rem;
   z-index: 1000;
   background-color:orange;
-  border-radius: 10px 0;
-  margin: 20px; 
-  min-width: 200px;
+  border-radius: 10px 0 0 10px;
+  margin: 20px 0; 
+  min-width: 20%;
 }
 .mobile-menu a {
   color: white;
