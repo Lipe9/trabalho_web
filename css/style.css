@@ -107,6 +107,7 @@ header {
   border-radius: 10px 0 0 10px;
   font-size:1.2rem;
   min-width: 30%;
+  text-aling: center; 
 }
 .mobile-menu a {
   color: white;
