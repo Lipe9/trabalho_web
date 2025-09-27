@@ -46,8 +46,8 @@ header {
   height: 80px;
   padding: 0.8rem 2rem;
   z-index: 1000;
-  margin: 5px;
-} bj
+  margin: 10px;
+}
 .hamburger {
   display: none;
   flex-direction: column;
