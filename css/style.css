@@ -39,7 +39,7 @@ header {
   width: 100%;
   height: 80px;
  z-index: 1000;
- background: orange;
+ 
 }
 .hamburger {
   display: none;
@@ -95,6 +95,7 @@ header {
   top: 80px;
   padding: 1rem;
   z-index: 1000;
+background: orange;
 }
 .mobile-menu a {
   color: white;
