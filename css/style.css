@@ -58,8 +58,6 @@ header {
   justify-content: center;
   position: relative;
   margin:10px; 
-  margin-left: auto; /* empurra para a direita */
-  margin-right: 10px; /* espaço da borda */
 }
 .hamburger span {
   height: 3px;
@@ -102,11 +100,13 @@ header {
   flex-direction: column;
   position: fixed;
   top: 90px;
+  right: 0;
   padding: 0.9rem;
   z-index: 1000;
   background-color:orange;
   border-radius: 10px 0;
   margin: 20px; 
+  min-width: 200px;
 }
 .mobile-menu a {
   color: white;
