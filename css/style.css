@@ -96,14 +96,15 @@ header {
   transform: rotate(-45deg);
 }
 .mobile-menu{
-
   display: none;
   flex-direction: column;
   position: fixed;
   top: 90px;
   padding: 0.9rem;
   z-index: 1000;
-  
+  background-color:orange;
+  border-radius:10px;
+margin: 10px; 
 }
 .mobile-menu a {
   color: white;
