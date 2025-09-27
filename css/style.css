@@ -8,11 +8,10 @@
   -ms-user-select: none;
 }
 .logo-img {
-  width: 15%;
+  width: 25%;
   height: auto;
-  z-index: 1;
- border-radius: 5px;
-z-index: 1000;
+  border-radius: 10px;
+ z-index: 1000;
 }
 
 nav {
@@ -45,8 +44,8 @@ header {
   top: 0;
   width: 100%;
   height: 80px;
-  padding: 1rem 2rem;
-z-index: 1000;
+  padding: 50px;
+  z-index: 1000;
 }
 .hamburger {
   display: none;
@@ -99,7 +98,7 @@ z-index: 1000;
   display: none;
   flex-direction: column;
   position: fixed;
-  top: 40px;
+  top: 100px;
   padding: 1rem;
   z-index: 1000;
   background: orange;
