@@ -46,13 +46,14 @@ header {
   height: 80px;
   padding: 50px;
   z-index: 1000;
+ margin:15px;
 }
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   transition: transform 0.3s ease;
-  width: 30px;
+  width: 40px;
   height: 25px;
   justify-content: center;
   position: relative;
