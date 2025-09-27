@@ -189,6 +189,9 @@ main {
   .mobile-menu.active {
     display: flex;
   }
+#produto,#home{
+  min-height: 100vh;
+}
 }
 
 .mini-carrinho {
