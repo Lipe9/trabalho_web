@@ -28,7 +28,7 @@
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  padding: 20px;
+  padding: 40px;
   transition: transform 0.3s ease;
 }
 
@@ -64,35 +64,4 @@
 
 .btn-comprar:hover {
   background: Orange;
-}
-
-#produto .titulo-produtos {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: orange; /* combina com o header */
-  text-align: center;
-  margin-bottom: 40px;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-
-  /* animação de entrada */
-  opacity: 0;
-  transform: translateY(-30px);
-  animation: slideDown 1s ease forwards;
-}
-
-/* Efeito ao passar o mouse no título */
-#produto .titulo-produtos:hover {
-  color: black;
-  text-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
-  transition: 0.3s ease;
-}
-
-/* Keyframes */
-@keyframes slideDown {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
