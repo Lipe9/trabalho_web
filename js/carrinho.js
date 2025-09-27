@@ -120,4 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
   atualizarMiniCarrinho();
 });
 
+// Botões Comprar
+document.querySelectorAll('.btn-comprar').forEach((botao) => {
+  botao.addEventListener('click', () => {
+    const nome = botao.getAttribute('data-nome');
+    const preco = parseFloat(botao.getAttribute('data-preco'));
+    const imagem = botao.getAttribute('data-imagem');
 
+    adicionarAoCarrinho(nome, preco, imagem);
+  });
+});
