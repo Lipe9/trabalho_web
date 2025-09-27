@@ -34,12 +34,12 @@
 
 .card-produto .preco {
   font-size: 1.1rem;
-  color: #2c7;
+  color: black;
   margin-bottom: 10px;
 }
 
 .btn-comprar {
-  background: #2c7;
+  background: orange;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -49,5 +49,5 @@
 }
 
 .btn-comprar:hover {
-  background: #28a745;
+  background: Orange;
 }
