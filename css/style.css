@@ -258,7 +258,7 @@ main {
 
 #notificacao-container {
   position: fixed;
-  top: 100px;
+  top: 120px;
   right: 20px;
   z-index: 1000;
   display: flex;
