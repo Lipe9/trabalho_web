@@ -130,7 +130,4 @@ main {
   .mobile-menu.active {
     display: flex;
   }
-.pagina {
-  min-height: 115vh;
-}
 }
