@@ -119,11 +119,27 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: white;
-  color: black;
 }
 #home{
   background-color: green;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+#produto{
+  background-color: white;
+  background-attachment: fixed;
+  background-size: cover;
+  color: black;
+}
+#sobre{
+ background-color: pink;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+#contato{
+  background-color: orange;
   background-attachment: fixed;
   background-size: cover;
   color: white;
