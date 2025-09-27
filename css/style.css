@@ -30,6 +30,7 @@ nav a.active,
 }
 header a.active{
 background: orange;
+width: 100%;
 }
 header {
   display: flex;
