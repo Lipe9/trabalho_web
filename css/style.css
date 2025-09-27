@@ -119,18 +119,17 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: black;
- 
-  color: white;
+  background-color: white;
+  color: black;
 }
 #home{
-  background-color: black;
+  background-color: green;
   background-attachment: fixed;
   background-size: cover;
   color: white;
 }
 #rodape {
-  background-color: #d63384; /* rosa escuro elegante */
+  background-color: black;
   color: white;
   text-align: center;
   padding: 20px 10px;
