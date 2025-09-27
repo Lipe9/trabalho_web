@@ -44,7 +44,7 @@ header {
   top: 0;
   width: 100%;
   height: 80px;
-  padding: 3rem 3rem;
+  padding: 1rem 2rem;
 }
 .hamburger {
   display: none;
@@ -97,7 +97,7 @@ header {
   display: none;
   flex-direction: column;
   position: fixed;
-  top: 80px;
+  top: 40px;
   padding: 1rem;
   z-index: 1000;
   background: orange;
@@ -106,7 +106,7 @@ header {
 }
 .mobile-menu a {
   color: white;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   z-index: 1000;
 }
 main {
