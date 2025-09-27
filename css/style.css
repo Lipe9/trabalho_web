@@ -109,12 +109,15 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: black;
+ 
+  color: white;
 }
 #home{
   background-color: black;
   background-attachment: fixed;
   background-size: cover;
-color: white;
+  color: white;
 }
 
 @media (max-width: 768px) {
