@@ -239,7 +239,23 @@ main {
   color: #ff3e7f;
   cursor: pointer;
 }
+.botao-destaque , #limparCarrinho {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #ff3e7f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+border: none;
+}
+
+.botao-destaque:hover {
+  background-color: #c71585;
+}
 /* Estilo para o contêiner de notificações */
+
 #notificacao-container {
   position: fixed;
   top: 100px;
@@ -264,6 +280,7 @@ main {
 }
 
 /* Animações para as notificações */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
