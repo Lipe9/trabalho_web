@@ -114,6 +114,7 @@ main {
   background-color: black;
   background-attachment: fixed;
   background-size: cover;
+color: white;
 }
 
 @media (max-width: 768px) {
