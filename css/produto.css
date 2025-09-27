@@ -65,7 +65,7 @@
 .btn-comprar:hover {
   background: Orange;
 }
-.produtos h2 {
+#produto h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #2c7; /* cor de destaque */
