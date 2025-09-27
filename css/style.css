@@ -103,6 +103,7 @@ header {
   top: 90px;
   padding: 0.9rem;
   z-index: 1000;
+  width:50%;
 }
 .mobile-menu a {
   color: white;
