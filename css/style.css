@@ -131,6 +131,7 @@ main {
   color: white;
 }
 #produto{
+  min-height: 130vh;
   background-color: white;
   background-attachment: fixed;
   background-size: cover;
