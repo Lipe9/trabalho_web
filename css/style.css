@@ -26,7 +26,7 @@ nav a,
  .mobile-menu a {
   color: white;
   text-decoration: none;
-  
+  padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
   font-weight: 600;
   transition: border-color 0.3s ease;
