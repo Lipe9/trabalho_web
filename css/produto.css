@@ -65,3 +65,26 @@
 .btn-comprar:hover {
   background: Orange;
 }
+.produtos h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c7; /* cor de destaque */
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif; /* escolha moderna */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  /* animação */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1s ease forwards;
+}
+
+/* animação do título */
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
