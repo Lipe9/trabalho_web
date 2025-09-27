@@ -195,8 +195,8 @@ main {
   top: 120px;
   right: 20px;
   width: 300px;
-  background: #fff0f5;
-  border: 2px solid #ff3e7f;
+  background: white;
+  border: 2px solid orange;
   border-radius: 12px;
   padding: 1rem;
   z-index: 999;
@@ -236,23 +236,23 @@ main {
   border: none;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #ff3e7f;
+  color: black;
   cursor: pointer;
 }
 .botao-destaque , #limparCarrinho {
   display: inline-block;
   margin-top: 1rem;
-  background-color: #ff3e7f;
+  background-color: black;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-border: none;
+  border: none;
 }
 
 .botao-destaque:hover {
-  background-color: #c71585;
+  background-color: black;
 }
 /* Estilo para o contêiner de notificações */
 
@@ -269,7 +269,7 @@ border: none;
 /* Estilo para cada notificação */
 
 .notificacao {
-  background-color: #ff3e7f;
+  background-color: Black;
   color: white;
   padding: 15px 20px;
   border-radius: 8px;
