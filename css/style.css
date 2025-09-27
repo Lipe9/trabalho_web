@@ -28,6 +28,9 @@ nav a.active,
 .mobile-menu a.active {
   border-bottom: 2px solid white;
 }
+header a.active{
+background: orange;
+}
 header {
   display: flex;
   justify-content: space-between;
