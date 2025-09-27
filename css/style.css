@@ -44,10 +44,10 @@ header {
   top: 0;
   width: 100%;
   height: 80px;
-  padding: 50px;
+  padding: 0.8rem 2rem;
   z-index: 1000;
- margin:15px;
-}
+  margin: 5px;
+} bj
 .hamburger {
   display: none;
   flex-direction: column;
@@ -101,9 +101,7 @@ header {
   position: fixed;
   top: 100px;
   padding: 1rem;
-  z-index: 1000;
-  background: orange;
-  
+  z-index: 1000; 
   width: 100%;
 }
 .mobile-menu a {
