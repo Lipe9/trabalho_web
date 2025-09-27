@@ -36,18 +36,17 @@ nav a.active,
   border-bottom: 2px solid white;
 }
 header {
-background:orange;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.8rem 2rem;
+  background: orange;
   color: white;
   position: fixed;
   top: 0;
   width: 100%;
   height: 80px;
-  
-  z-index: 1000;
-  margin: 10px;
+ z-index: 1000;
 }
 .hamburger {
   display: none;
@@ -97,7 +96,7 @@ background:orange;
   transform: rotate(-45deg);
 }
 .mobile-menu{
-background:orange;
+ background:orange;
   display: none;
   flex-direction: column;
   position: fixed;
