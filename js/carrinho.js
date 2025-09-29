@@ -53,7 +53,7 @@ function atualizarMiniCarrinho() {
       <img src="${item.imagem}" alt="${item.produto}" width="50" height="50" style="border-radius: 5px; margin-right: 10px;">
       <span>${item.produto}</span>
       <span>R$ ${item.preco.toFixed(2)}</span>
-      <button class="remover-item" data-index="${index}" style="margin-left: 10px; color: red; background: none; border: none; font-size: 16px;">X</button>
+      <button onclick="removerItemDoCarrinho(${index})" style="margin-left: 10px; color: red; background: none; border: none; font-size: 16px;">X</button>
     `;
     li.style.display = 'flex';
     li.style.alignItems = 'center';
@@ -65,14 +65,6 @@ function atualizarMiniCarrinho() {
   });
 
   totalCarrinho.textContent = `R$ ${total.toFixed(2)}`;
-
-  // Adiciona event listeners para os botões de remoção de itens
-  document.querySelectorAll('.remover-item').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const index = e.target.getAttribute('data-index');
-      removerItemDoCarrinho(index);
-    });
-  });
 }
 
 // Função para remover um item específico do carrinho pelo índice

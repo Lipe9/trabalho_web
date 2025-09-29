@@ -259,10 +259,12 @@ main {
   min-height: 100vh;
 }
   /* Estilo para o contador do carrinho */
-.cart-count{
+.cart-count, #cart-count-mobile {
   position: absolute;
-  background: transparent;
-  color: orange;
+  top: -10px;
+  right: -10px;
+  background: orange;
+  color: white;
   font-weight: bold;
   font-size: 12px;
   border-radius: 50%;
@@ -271,7 +273,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border: 2px solid white;
 }
 }
 
