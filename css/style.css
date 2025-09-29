@@ -121,7 +121,7 @@ header {
   right: 0;
   padding: 0.9rem;
   z-index: 1000;
-  background-color:orange;
+  background: rgba(255, 166, 0, 0.726);
   border-radius: 10px 0 0 10px;
   font-size:1.2rem;
   min-width: 30%;
