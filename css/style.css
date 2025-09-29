@@ -55,7 +55,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  
+  background: rgba(255, 166, 0, 0.726);
   color: black;
   position: fixed;
   top: 0;
@@ -262,7 +262,7 @@ main {
 .cart-count, #cart-count-mobile {
   color: white;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
 }
 }
 
