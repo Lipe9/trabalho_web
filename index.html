@@ -1,93 +1,140 @@
+<!-- Declaração do tipo de documento HTML5 -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Configuração de charset para suporte a caracteres especiais -->
     <meta charset="UTF-8">
+    <!-- Meta tag para responsividade em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o arquivo CSS principal de estilos -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Link para o arquivo CSS específico dos produtos -->
     <link rel="stylesheet" href="css/produto.css">
+    <!-- Importação da fonte Poppins do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Importação da fonte Lobster do Google Fonts para títulos -->
    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+   <!-- Importação dos ícones Font Awesome -->
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Título da página -->
     <title>Trabalho</title>
 </head>
 <body>
+<!-- Cabeçalho do site com logo, navegação e menu hambúrguer para mobile -->
 <header>
+  <!-- Logo da lanchonete -->
   <div class="logo">
     <img src="img/logo.png" alt="Logo" class="logo-img">
   </div>
+  <!-- Navegação principal com links para seções da página -->
 <nav>
   <a href="#home">Home</a> 
   <a href="#produto">Produtos</a>
   <a href="#sobre">Sobre</a>
   <a href="#contato">Contato</a>
+  <a href="#delivery">Delivery</a>
+  <!-- Link para o carrinho com ícone e contador -->
   <a href="#carrinho" class="carrinho-link">
-  <i class="fas fa-shopping-cart"></i>
-  <span id="cart-count" class="cart-count">0</span></a>
+    <i class="fas fa-shopping-cart"></i></a>
 </nav>
+  <!-- Botão hambúrguer para abrir menu mobile -->
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
   </div>
 </header>
+  <!-- Menu mobile que aparece ao clicar no hambúrguer -->
   <div class="mobile-menu" id="mobileMenu">
   <a href="#home">Home</a>
   <a href="#produto">Produtos</a>
   <a href="#sobre">Sobre</a>
   <a href="#contato">Contato</a>
+  <a href="#delivery">Delivery</a>
   <a href="#carrinho" class="carrinho-link">
-   <i class="fas fa-shopping-cart"></i>
-   <span id="cart-count-mobile" class="cart-count">0</span></a>
+    <i class="fas fa-shopping-cart"></i></a>
 </div>
+<!-- Conteúdo principal da página -->
 <main>
+   <!-- Seção Home com fundo e mensagem de boas-vindas -->
    <section id="home" class="pagina">
+   <!-- Container para notificações dinâmicas -->
    <div id="notificacao-container"></div>
-    <h1>Início</h1>
+    <div class="hero">
+      <h1>Bem-vindo à Nossa Lanchonete</h1>
+      <p>Delicie-se com nossos sanduíches frescos, tacos deliciosos e bebidas refrescantes. O melhor lugar para uma pausa rápida e saborosa!</p>
+      <a href="#produto" class="btn-hero">Ver Produtos</a>
+    </div>
    </section>
+   <!-- Seção Produtos com busca, filtros e cards de produtos -->
    <section id="produto" class="pagina">
+    <h1>Nossos Produtos</h1>
+    <!-- Container para barra de busca e filtros -->
+    <div class="search-filter-container">
+      <!-- Campo de entrada para buscar produtos -->
+      <input type="text" id="search-bar" placeholder="Buscar produtos...">
+      <!-- Botões de filtro por categoria -->
+      <div class="filters">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="comida">Comida</button>
+        <button class="filter-btn" data-filter="bebida">Bebida</button>
+      </div>
+    </div>
+    <!-- Cards de ícones para filtrar por categoria -->
+    <div class="icon-cards">
+      <div class="icon-card" data-category="comida">
+        <i class="fas fa-utensils"></i>
+        <p>Comida</p>
+      </div>
+      <div class="icon-card" data-category="bebida">
+        <i class="fas fa-coffee"></i>
+        <p>Bebida</p>
+      </div>
+    </div>
+  <!-- Container para os cards de produtos -->
   <div class="produtos-container">
-    <div class="card-produto">
-      <img src="https://placehold.co/600x400" alt="Produto 1">
+    <!-- Card de produto Sanduíche -->
+    <div class="card-produto" data-category="comida">
+      <img src="https://via.placeholder.com/600x400/8B4513/FFFFFF?text=Sanduíche" alt="Sanduíche" data-imagem="https://via.placeholder.com/600x400/8B4513/FFFFFF?text=Sanduíche">
       <h3>Sanduíche</h3>
       <p class="preco">R$9,90</p>
-      <button class="btn-comprar" data-nome="Sanduíche" data-preco="9.90">Comprar</button>
+      <button class="btn-comprar" data-nome="Sanduíche" data-preco="9.90" data-imagem="https://via.placeholder.com/600x400/8B4513/FFFFFF?text=Sanduíche">Comprar</button>
     </div>
 
-    <div class="card-produto">
-      <img src="https://placehold.co/600x400" alt="Produto 2">
+    <!-- Card de produto Taco -->
+    <div class="card-produto" data-category="comida">
+      <img src="https://via.placeholder.com/600x400/FFD700/000000?text=Taco" alt="Taco" data-imagem="https://via.placeholder.com/600x400/FFD700/000000?text=Taco">
       <h3>Taco</h3>
       <p class="preco">R$9,90</p>
-      <button class="btn-comprar" data-nome="Taco" data-preco="9.90">Comprar</button>
+      <button class="btn-comprar" data-nome="Taco" data-preco="9.90" data-imagem="https://via.placeholder.com/600x400/FFD700/000000?text=Taco">Comprar</button>
     </div>
 
-    <div class="card-produto">
-      <img src="https://placehold.co/600x400" alt="Produto 3">
+    <!-- Card de produto Refrigerante -->
+    <div class="card-produto" data-category="bebida">
+      <img src="https://via.placeholder.com/600x400/0000FF/FFFFFF?text=Refrigerante" alt="Refri" data-imagem="https://via.placeholder.com/600x400/0000FF/FFFFFF?text=Refrigerante">
       <h3>Refri</h3>
       <p class="preco">R$9,90</p>
-      <button class="btn-comprar" data-nome="Refri" data-preco="9.90">Comprar</button>
+      <button class="btn-comprar" data-nome="Refri" data-preco="9.90" data-imagem="https://via.placeholder.com/600x400/0000FF/FFFFFF?text=Refrigerante">Comprar</button>
     </div>
-<div class="card-produto">
-      <img src="https://placehold.co/600x400" alt="Produto 3">
+    <!-- Card de produto Café -->
+<div class="card-produto" data-category="bebida">
+      <img src="https://via.placeholder.com/600x400/A0522D/FFFFFF?text=Café" alt="Café" data-imagem="https://via.placeholder.com/600x400/A0522D/FFFFFF?text=Café">
       <h3>Café</h3>
       <p class="preco">R$9,90</p>
-      <button class="btn-comprar" data-nome="Café" data-preco="9.90">Comprar</button>
-    </div>
-<div class="card-produto">
-      <img src="https://placehold.co/600x400" alt="Produto 3">
-      <h3>Café</h3>
-      <p class="preco">R$9,90</p>
-      <button class="btn-comprar" data-nome="Café" data-preco="9.90">Comprar</button>
+      <button class="btn-comprar" data-nome="Café" data-preco="9.90" data-imagem="https://via.placeholder.com/600x400/A0522D/FFFFFF?text=Café">Comprar</button>
     </div>
   </div>
 </section>
+   <!-- Seção Sobre (placeholder) -->
    <section id="sobre" class="pagina">
       <h1>Sobre</h1>
    </section>
+   <!-- Seção Contato (placeholder) -->
    <section id="contato" class="pagina">
       <h1>Contato</h1>
    </section>
 </main>
-  <!-- Mini Carrinho -->
+  <!-- Modal do Mini Carrinho para visualizar itens adicionados -->
 <div class="mini-carrinho" id="miniCarrinho">
   <button id="fecharCarrinho" class="fechar-carrinho">X</button>
   <h3>Seu Carrinho</h3>
@@ -99,6 +146,20 @@
   </button>
 </div>
 
+  <!-- Modal do Mini Delivery para inserir informações de entrega -->
+<div class="mini-delivery" id="miniDelivery">
+  <button id="fecharDelivery" class="fechar-delivery">X</button>
+  <h3>Informações de Entrega</h3>
+  <form id="deliveryForm">
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" name="cep" required>
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" name="endereco" required>
+    <button type="submit" class="botao-destaque">Salvar</button>
+  </form>
+</div>
+
+  <!-- Rodapé com créditos e links para redes sociais -->
   <footer id="rodape">
   <p>&copy; Developer by Lipe Dev. </p>
   <div class="redes-sociais">
@@ -107,7 +168,9 @@
     <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
   </div>
 </footer>
+<!-- Script principal para funcionalidades da página -->
 <script src="js/script.js"></script>
+<!-- Script específico para o carrinho de compras -->
 <script src="js/carrinho.js"></script>
 </body>
 </html>

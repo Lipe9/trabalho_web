@@ -1,3 +1,4 @@
+/* Reset de estilos globais e definição de fonte padrão */
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,8 @@
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+/* Estilo para a imagem do logo */
 .logo-img {
   width: 25%;
   height: auto;
@@ -14,6 +17,7 @@
   z-index: 1000;
 }
 
+/* Estilo para a navegação principal */
 nav {
   display: flex;
   gap: 2rem;
@@ -22,14 +26,18 @@ nav a {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+
+/* Estilo para links de navegação (desktop e mobile) */
 nav a,
  .mobile-menu a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   border-bottom: 2px solid transparent;
   font-weight: 600;
   transition: border-color 0.3s ease;
 }
+
+/* Estilo para links ativos e hover */
 nav a.active,
 .mobile-menu a.active {
   border-bottom: 2px solid white;
@@ -40,19 +48,22 @@ nav a:hover{
 .mobile-menu:hover {
   border-bottom: 2px solid white;
 }
+
+/* Estilo para o cabeçalho fixo */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: orange;
-  color: white;
+  background: rgba(255, 166, 0, 0.726);
+  color: black;
   position: fixed;
   top: 0;
   width: 100%;
   height: 100px;
   z-index: 1000;
 }
+/* Estilo para o botão hambúrguer (menu mobile) */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -62,7 +73,7 @@ header {
   height: 25px;
   justify-content: center;
   position: relative;
-  margin:10px; 
+  margin:10px;
 }
 .hamburger span {
   height: 3px;
@@ -100,6 +111,8 @@ header {
   top: 10px;
   transform: rotate(-45deg);
 }
+
+/* Estilo para o menu mobile */
 .mobile-menu{
   display: none;
   flex-direction: column;
@@ -112,48 +125,91 @@ header {
   border-radius: 10px 0 0 10px;
   font-size:1.2rem;
   min-width: 30%;
-  text-align: center; 
+  text-align: center;
 }
 .mobile-menu a {
   color: white;
   padding: 0.9rem 0;
   z-index: 0;
 }
+/* Estilo para o conteúdo principal */
 main {
   scroll-behavior: smooth;
 }
-.pagina {
+
+/* Estilo para a seção Home com fundo de imagem */
+#home{
+  background-image: url('../img/fundo.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  color: black;
   min-height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-#home{
-  background-color: white;
-  background-attachment: fixed;
-  background-size: cover;
-  color: black;
+
+/* Estilo para o bloco hero na seção Home */
+.hero {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-#produto{
-  min-height: 130vh;
-  background-color: white;
-  background-attachment: fixed;
-  background-size: cover;
-  color: black;
+.hero h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: orange;
 }
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Estilo para o botão hero */
+.btn-hero {
+  background: orange;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+.btn-hero:hover {
+  background: darkorange;
+}
+
+/* Estilo para a seção Sobre */
 #sobre{
   background-color: white;
-  background-attachment: fixed;
-  background-size: cover;
   color:black;
+  min-height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
+/* Estilo para a seção Contato */
 #contato{
-  background-attachment: fixed;
-  background-size: cover;
   color: black;
   background-color: white;
+  min-height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
+/* Estilo para o rodapé */
 #rodape {
   background-color: black;
   color: white;
@@ -184,19 +240,25 @@ main {
   color: #ffc0cb;
   transform: scale(1.2);
 }
+/* Media query para telas menores que 800px (responsividade mobile) */
 @media (max-width: 800px) {
+  /* Oculta a navegação desktop */
   nav {
     display: none;
   }
+  /* Exibe o botão hambúrguer */
   .hamburger {
     display: flex;
   }
+  /* Exibe o menu mobile quando ativo */
   .mobile-menu.active {
     display: flex;
   }
+  /* Ajusta altura mínima das seções produto e home */
 #produto,#home{
   min-height: 100vh;
 }
+  /* Estilo para o contador do carrinho */
 .cart-count{
   position: absolute;
   background: transparent;
@@ -213,6 +275,7 @@ main {
 }
 }
 
+/* Estilo para o modal do mini carrinho */
 .mini-carrinho {
   position: fixed;
   top: 120px;
@@ -251,6 +314,8 @@ main {
   object-fit: cover;
   border-radius: 8px;
 }
+
+/* Botão para fechar o modal do carrinho */
 .fechar-carrinho {
   position: absolute;
   top: 10px;
@@ -262,6 +327,8 @@ main {
   color: black;
   cursor: pointer;
 }
+
+/* Estilo para botões de destaque (finalizar compra, limpar carrinho) */
 .botao-destaque , #limparCarrinho {
   display: inline-block;
   margin-top: 1rem;
@@ -276,6 +343,56 @@ main {
 
 .botao-destaque:hover {
   background-color: black;
+}
+
+/* Estilo para o modal do mini delivery */
+.mini-delivery {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border: 4px solid orange;
+  border-radius: 12px;
+  padding: 1rem;
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.mini-delivery h3 {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.mini-delivery form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-delivery label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.mini-delivery input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botão para fechar o modal de delivery */
+.fechar-delivery {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
 }
 /* Estilo para o contêiner de notificações */
 
@@ -324,19 +441,4 @@ main {
     opacity: 0;
     transform: translateY(-10px);
   }
-}
-.cart-count {
-  position: absolute;
-  top: 269px;
-  left: 92px;
-  background: transparent;
-  color: orange;
-  font-weight: bold;
-  font-size: 12px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

@@ -1,11 +1,15 @@
+/**
+ * Inicializa o carrinho de compras a partir do localStorage ou cria um array vazio.
+ * O carrinho armazena os itens selecionados pelo usuário.
+ */
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-// Salva o carrinho no localStorage
+// Função para salvar o estado atual do carrinho no localStorage
 function salvarCarrinho() {
   localStorage.setItem('carrinho', JSON.stringify(carrinho));
 }
 
-// Adiciona produto ao carrinho
+// Função para adicionar um produto ao carrinho
 function adicionarAoCarrinho(produto, preco, imagem) {
   carrinho.push({ produto, preco, imagem });
   salvarCarrinho();
@@ -14,27 +18,28 @@ function adicionarAoCarrinho(produto, preco, imagem) {
   exibirNotificacao(`${produto} foi adicionado ao carrinho!`);
 }
 
-// Atualiza os contadores
+// Função para atualizar os contadores de itens no ícone do carrinho (desktop e mobile)
 function atualizarContadorCarrinho() {
   document.getElementById('cart-count').textContent = carrinho.length;
   document.getElementById('cart-count-mobile').textContent = carrinho.length;
 }
 
-// Seletores
+// Seletores para elementos do carrinho
 const miniCarrinho = document.getElementById('miniCarrinho');
 const fecharCarrinho = document.getElementById('fecharCarrinho');
 const carrinhoLinkDesktop = document.querySelector('.carrinho-link');
 const carrinhoLinkMobile = document.querySelector('.mobile-menu .carrinho-link');
 
-// Abre e fecha o mini carrinho
+// Função para abrir o modal do mini carrinho
 function abrirCarrinho() {
   miniCarrinho.style.display = 'block';
 }
+// Função para fechar o modal do mini carrinho
 function fecharMiniCarrinho() {
   miniCarrinho.style.display = 'none';
 }
 
-// Atualiza o mini carrinho na lateral
+// Função para atualizar a lista de itens no mini carrinho e calcular o total
 function atualizarMiniCarrinho() {
   const itensCarrinho = document.getElementById('itensCarrinho');
   const totalCarrinho = document.getElementById('totalCarrinho');
@@ -61,7 +66,7 @@ function atualizarMiniCarrinho() {
 
   totalCarrinho.textContent = `R$ ${total.toFixed(2)}`;
 
-  // Eventos para os botões "X"
+  // Adiciona event listeners para os botões de remoção de itens
   document.querySelectorAll('.remover-item').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       const index = e.target.getAttribute('data-index');
@@ -70,28 +75,30 @@ function atualizarMiniCarrinho() {
   });
 }
 
-// Remove item do carrinho
+// Função para remover um item específico do carrinho pelo índice
 function removerItemDoCarrinho(index) {
   carrinho.splice(index, 1);
   salvarCarrinho();
   atualizarContadorCarrinho();
   atualizarMiniCarrinho();
 }
-// Limpar todos os itens do carrinho
+
+// Função para limpar todos os itens do carrinho
 function limparCarrinho() {
   carrinho = [];
   salvarCarrinho();
   atualizarContadorCarrinho();
   atualizarMiniCarrinho();
 }
-// Botão para limpar carrinho
+
+// Event listener para o botão de limpar carrinho com confirmação
 document.getElementById('limparCarrinho').addEventListener('click', () => {
   if (confirm("Tem certeza que deseja limpar o carrinho?")) {
     limparCarrinho();
   }
 });
 
-// Eventos para abrir e fechar o carrinho
+// Event listeners para abrir o carrinho ao clicar nos links (desktop e mobile)
 carrinhoLinkDesktop.addEventListener('click', (e) => {
   e.preventDefault();
   abrirCarrinho();
@@ -102,7 +109,7 @@ carrinhoLinkMobile.addEventListener('click', (e) => {
 });
 fecharCarrinho.addEventListener('click', fecharMiniCarrinho);
 
-// Notificação de produto adicionado
+// Função para exibir notificações temporárias (usada para feedback ao usuário)
 function exibirNotificacao(mensagem) {
   const container = document.getElementById('notificacao-container');
   const notificacao = document.createElement('div');
@@ -114,13 +121,13 @@ function exibirNotificacao(mensagem) {
   }, 4000);
 }
 
-// Inicializa carrinho com dados salvos
+// Inicialização do carrinho quando a página carrega
 document.addEventListener('DOMContentLoaded', () => {
   atualizarContadorCarrinho();
   atualizarMiniCarrinho();
 });
 
-// Botões Comprar
+// Event listeners para os botões "Comprar" em cada produto
 document.querySelectorAll('.btn-comprar').forEach((botao) => {
   botao.addEventListener('click', () => {
     const nome = botao.getAttribute('data-nome');
