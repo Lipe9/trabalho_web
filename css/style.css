@@ -262,9 +262,7 @@ main {
 .cart-count, #cart-count-mobile {
   color: white;
   font-weight: bold;
-  font-size: 12px;
-  border-radius: 50%;
-  border: 2px solid white;
+  font-size: 13px;
 }
 }
 
