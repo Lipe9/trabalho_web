@@ -117,12 +117,12 @@ header {
   display: none;
   flex-direction: column;
   position: fixed;
-  top: 90px;
+  top: 100px;
   right: 0;
   padding: 0.9rem;
   z-index: 1000;
   background: rgba(255, 166, 0, 0.726);
-  border-radius: 10px 0 0 10px;
+  border-radius: 0 0 0 10px;
   font-size:1.2rem;
   min-width: 30%;
   text-align: center;
