@@ -11,12 +11,12 @@
   width: 25%;
   height: auto;
   border-radius: 10px;
- z-index: 1000;
+  z-index: 1000;
 }
 
 nav {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 nav a {
   font-weight: 600;
@@ -26,7 +26,6 @@ nav a,
  .mobile-menu a {
   color: white;
   text-decoration: none;
-  padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
   font-weight: 600;
   transition: border-color 0.3s ease;
@@ -35,11 +34,17 @@ nav a.active,
 .mobile-menu a.active {
   border-bottom: 2px solid white;
 }
+nav a:hover{
+  border-bottom: 2px solid white;
+}
+.mobile-menu:hover {
+  border-bottom: 2px solid white;
+}
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 2rem;
+  padding: 1rem;
   background: orange;
   color: white;
   position: fixed;
@@ -125,10 +130,10 @@ main {
   text-align: center;
 }
 #home{
-  background-color: green;
+  background-color: white;
   background-attachment: fixed;
   background-size: cover;
-  color: white;
+  color: black;
 }
 #produto{
   min-height: 130vh;
@@ -138,16 +143,16 @@ main {
   color: black;
 }
 #sobre{
- background-color: pink;
+  background-color: white;
   background-attachment: fixed;
   background-size: cover;
-  color: white;
+  color:black;
 }
 #contato{
-  background-color: orange;
   background-attachment: fixed;
   background-size: cover;
-  color: white;
+  color: black;
+  background-color: white;
 }
 #rodape {
   background-color: black;
@@ -179,7 +184,7 @@ main {
   color: #ffc0cb;
   transform: scale(1.2);
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   nav {
     display: none;
   }
@@ -191,6 +196,20 @@ main {
   }
 #produto,#home{
   min-height: 100vh;
+}
+.cart-count{
+  position: absolute;
+  background: transparent;
+  color: orange;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 }
 
@@ -305,4 +324,19 @@ main {
     opacity: 0;
     transform: translateY(-10px);
   }
+}
+.cart-count {
+  position: absolute;
+  top: 269px;
+  left: 92px;
+  background: transparent;
+  color: orange;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
