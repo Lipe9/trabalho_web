@@ -260,16 +260,13 @@ main {
 }
   /* Estilo para o contador do carrinho */
 .cart-count, #cart-count-mobile {
-  background: orange;
   color: white;
   font-weight: bold;
   font-size: 12px;
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
   border: 2px solid white;
 }
 }
