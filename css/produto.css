@@ -3,6 +3,10 @@
   min-height: 130vh;
   background-color: white;
   color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 /* Container geral para produtos */
 .produtos {
@@ -173,3 +177,4 @@
     flex-wrap: nowrap;
   }
 }
+
