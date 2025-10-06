@@ -192,10 +192,6 @@ main {
   background-color: white;
   color:black;
   min-height: 110vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 /* Estilo para a seção Contato */
@@ -203,10 +199,6 @@ main {
   color: black;
   background-color: white;
   min-height: 110vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 /* Estilo para o rodapé */
@@ -336,55 +328,6 @@ main {
   background-color: black;
 }
 
-/* Estilo para o modal do mini delivery */
-.mini-delivery {
-  position: fixed;
-  top: 120px;
-  right: 20px;
-  width: 300px;
-  background: white;
-  border: 4px solid orange;
-  border-radius: 12px;
-  padding: 1rem;
-  z-index: 999;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  display: none;
-}
-
-.mini-delivery h3 {
-  margin-bottom: 0.5rem;
-  color: black;
-}
-
-.mini-delivery form {
-  display: flex;
-  flex-direction: column;
-}
-
-.mini-delivery label {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.mini-delivery input {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Botão para fechar o modal de delivery */
-.fechar-delivery {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: black;
-  cursor: pointer;
-}
 /* Estilo para o contêiner de notificações */
 
 #notificacao-container {
