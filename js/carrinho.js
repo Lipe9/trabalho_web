@@ -121,7 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Event listeners para os botões "Comprar" em cada produto
 document.querySelectorAll('.btn-comprar').forEach((botao) => {
-  botao.addEventListener('click', () => {
+  botao.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent card click
     const nome = botao.getAttribute('data-nome');
     const preco = parseFloat(botao.getAttribute('data-preco'));
     const imagem = botao.getAttribute('data-imagem');

@@ -131,6 +131,7 @@ const fecharModalProduto = document.getElementById('fecharModalProduto');
 const modalImagem = document.getElementById('modalImagem');
 const modalNome = document.getElementById('modalNome');
 const modalPreco = document.getElementById('modalPreco');
+const modalDetails = document.getElementById('modalDetails');
 const btnAdicionarCarrinho = document.getElementById('btnAdicionarCarrinho');
 const btnComprarAgora = document.getElementById('btnComprarAgora');
 
@@ -139,6 +140,7 @@ function abrirModalProduto(produto) {
   modalImagem.src = produto.imagem;
   modalNome.textContent = produto.nome;
   modalPreco.textContent = `R$ ${produto.preco}`;
+  modalDetails.textContent = produto.details;
   modalProduto.style.display = 'flex';
 }
 
@@ -153,7 +155,8 @@ document.querySelectorAll('.card-produto').forEach(card => {
     const nome = card.querySelector('h3').textContent;
     const preco = parseFloat(card.querySelector('.preco').textContent.replace('R$', '').trim());
     const imagem = card.querySelector('img').getAttribute('data-imagem') || card.querySelector('img').src;
-    abrirModalProduto({ nome, preco, imagem });
+    const details = card.getAttribute('data-details');
+    abrirModalProduto({ nome, preco, imagem, details });
   });
 });
 

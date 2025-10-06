@@ -1,4 +1,8 @@
-- [x] Add product modal HTML in index.html
-- [x] Style the product modal in css/produto.css
-- [x] Add JavaScript in js/script.js to open modal on product click and handle buttons
-- [ ] Test the functionality
+# TODO List for Product Modal Expansion and Sections
+
+- [x] Add data-details attribute to each product card in index.html
+- [x] Add content to the Sobre (About Us) section in index.html
+- [x] Improve the Contato (Contact) section in index.html
+- [x] Modify modal styles in css/produto.css to make it full screen
+- [x] Update js/script.js to include product details in the modal
+- [ ] Test the modal expansion and sections
