@@ -32,7 +32,6 @@
   <a href="#produto">Produtos</a>
   <a href="#sobre">Sobre</a>
   <a href="#contato">Contato</a>
-  <a href="#delivery">Delivery</a>
   <a href="#carrinho" class="carrinho-link">
     Carrinho <span id="cart-count" class="cart-count"> 0</span></a>
 </a>
@@ -52,7 +51,6 @@
   <a href="#produto">Produtos</a>
   <a href="#sobre">Sobre</a>
   <a href="#contato">Contato</a>
-  <a href="#delivery">Delivery</a>
   <a href="#carrinho" class="carrinho-link">
     Carrinho <span id="cart-count-mobile" class="cart-count"> 0</span>
 </a>
@@ -94,7 +92,7 @@
     </div>
   <!-- Container para os cards de produtos -->
   <div class="produtos-container">
-    <!-- Card de produto Sanduíche -->
+    <!-- Card de produto -->
     <div class="card-produto" data-category="comida">
       <img src="https://placehold.co/600x400" alt="Sanduíche" data-imagem="https://placehold.co/600x400">
       <h3>Sanduíche</h3>
@@ -102,7 +100,7 @@
       <button class="btn-comprar" data-nome="Sanduíche" data-preco="9.90" data-imagem="https://placehold.co/600x400"> Comprar </button>
     </div>
 
-    <!-- Card de produto Taco -->
+    <!-- Card de produto -->
 
     <div class="card-produto" data-category="comida">
       <img src="https://placehold.co/600x400" alt="Taco" data-imagem="https://via.placeholder.com/600x400/FFD700/000000?text=Taco">
@@ -112,14 +110,14 @@
       <button class="btn-comprar" data-nome="Taco" data-preco="9.90" data-imagem="https://via.placeholder.com/600x400/FFD700/000000?text=Taco">Comprar</button>
     </div>
 
-    <!-- Card de produto Refrigerante -->
+    <!-- Card de produto -->
     <div class="card-produto" data-category="bebida">
       <img src="https://placehold.co/600x400" alt="Refri" data-imagem="https://placehold.co/600x400">
       <h3>Refri</h3>
       <p class="preco">R$9,90</p>
       <button class="btn-comprar" data-nome="Refri" data-preco="9.90" data-imagem="https://placehold.co/600x400">Comprar</button>
     </div>
-    <!-- Card de produto Café -->
+    <!-- Card de produto -->
 <div class="card-produto" data-category="bebida">
       <img src="https://placehold.co/600x400" alt="Café" data-imagem="https://placehold.co/600x400">
       <h3>Café</h3>
@@ -128,14 +126,20 @@
     </div>
   </div>
 </section>
-   <!-- Seção Sobre -->
-   <section id="sobre" class="pagina">
-      <h1>Sobre</h1>
    </section>
    <!-- Seção Contato -->
    <section id="contato" class="pagina">
       <h1>Contato</h1>
+      <h2>desdfs</h2>
+      <form action="">
+        <input type="text" placeholder="Digite seu nome...">
+        <input type="email" placeholder="Digite seu email...">
+        <input type="text" placeholder="Digite o motivo..." class="motivo">
+      </form>
    </section>
+   <!-- Seção Sobre -->
+   <section id="sobre" class="pagina">
+    <h1>Sobre</h1>
 </main>
   <!-- Modal do Mini Carrinho para visualizar itens adicionados -->
 <div class="mini-carrinho" id="miniCarrinho">
@@ -148,20 +152,19 @@
     Limpar Carrinho
   </button>
 </div>
-
-  <!-- Modal do Mini Delivery para inserir informações de entrega -->
-<div class="mini-delivery" id="miniDelivery">
-  <button id="fecharDelivery" class="fechar-delivery">X</button>
-  <h3>Informações de Entrega</h3>
-  <form id="deliveryForm">
-    <label for="cep">CEP:</label>
-    <input type="text" id="cep" name="cep" required>
-    <label for="endereco">Endereço:</label>
-    <input type="text" id="endereco" name="endereco" required>
-    <button type="submit" class="botao-destaque">Salvar</button>
-  </form>
+  <!-- Modal para detalhes do produto -->
+<div class="modal-produto" id="modalProduto">
+  <button id="fecharModalProduto" class="fechar-modal">X</button>
+  <div class="modal-content">
+    <img id="modalImagem" src="" alt="Produto" class="modal-img">
+    <h3 id="modalNome"></h3>
+    <p id="modalPreco" class="modal-preco"></p>
+    <div class="modal-buttons">
+      <button id="btnAdicionarCarrinho" class="btn-modal">Adicionar ao Carrinho</button>
+      <button id="btnComprarAgora" class="btn-modal destaque">Comprar Agora</button>
+    </div>
+  </div>
 </div>
-
   <!-- Rodapé com créditos e links para redes sociais -->
   <footer id="rodape">
   <p>&copy; Developer by Lipe Dev. </p>
@@ -176,7 +179,6 @@
 <!-- Script específico para o carrinho de compras -->
 <script src="js/carrinho.js"></script>
 </body>
-
 </html>
 
 

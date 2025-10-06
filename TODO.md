@@ -1,0 +1,4 @@
+- [x] Add product modal HTML in index.html
+- [x] Style the product modal in css/produto.css
+- [x] Add JavaScript in js/script.js to open modal on product click and handle buttons
+- [ ] Test the functionality
