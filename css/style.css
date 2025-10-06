@@ -205,7 +205,6 @@ main {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -386,20 +385,14 @@ main {
 
 /*Sobre e Contato*/
 form{
-  width: 90%;
+width: 100%;
 }
 input{
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 3px;
+  padding: 5px 2px;
+  margin: 3px 0;
   border: 2px solid;
-  z-index: 0;
-  margin: 10px;
+  border-radius: 4px;
 }
 .enviar{
   width: 100%;
@@ -411,8 +404,8 @@ input{
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin: 0;
 }
 .texto{
   height: 100px;
-
 }
