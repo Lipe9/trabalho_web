@@ -205,7 +205,7 @@
 }
 
 .modal-img {
-  width: 50%;
+  width: 80%;
   max-width: 400px;
   height: auto;
   border-radius: 10px;
@@ -221,20 +221,21 @@
 
 .modal-preco {
   font-size: 1.5rem;
-  color: black;
+  color: orange;
   margin-bottom: 10px;
 }
 
 .modal-details {
-  font-size: 1.1rem;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
   max-width: 600px;
 }
 
 .modal-buttons {
+  margin: 12px;
   display: flex;
-  gap: 15px;
+  gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -243,7 +244,7 @@
   background: orange;
   color: white;
   border: none;
-  padding: 12px 25px;
+  padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -271,6 +272,6 @@
   border: none;
   font-size: 2rem;
   font-weight: bold;
-  color: black;
+  color: orange;
   cursor: pointer;
 }

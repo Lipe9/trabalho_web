@@ -192,15 +192,23 @@ main {
   background-color: white;
   color:black;
   min-height: 110vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 /* Estilo para a seção Contato */
 #contato{
   color: black;
   background-color: white;
-  min-height: 110vh;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
 /* Estilo para o rodapé */
 #rodape {
   background-color: black;
@@ -211,7 +219,6 @@ main {
   position: relative;
   z-index: 1;
 }
-
 #rodape p {
   margin: 10px 0;
   font-size: 1em;
@@ -375,4 +382,36 @@ main {
     opacity: 0;
     transform: translateY(-10px);
   }
+}
+
+/*Sobre e Contato*/
+form{
+  width: 100%;
+}
+input{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 3px;
+  border: 2px solid;
+  z-index: 0;
+  margin: 10px;
+}
+.enviar{
+  width: 90%;
+  padding: 5px 0;
+  border-radius: 5px;
+  border: 2px solid orange;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.texto{
+  height: 100px;
 }
