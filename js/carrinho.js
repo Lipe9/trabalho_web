@@ -83,11 +83,10 @@ function limparCarrinho() {
   atualizarMiniCarrinho();
 }
 
-// Event listener para o botão de limpar carrinho com confirmação
+// Event listener para o botão de limpar carrinho
 document.getElementById('limparCarrinho').addEventListener('click', () => {
-  if (confirm("Tem certeza que deseja limpar o carrinho?")) {
-    limparCarrinho();
-  }
+  limparCarrinho();
+  exibirNotificacao('Carrinho limpo com sucesso!');
 });
 
 // Event listeners para abrir o carrinho ao clicar nos links (desktop e mobile)

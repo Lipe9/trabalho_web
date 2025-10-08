@@ -284,7 +284,7 @@ main {
   color: black;
 }
 
-.itens-carrinho {
+#itensCarrinho {
   max-height: 200px;
   overflow-y: auto;
   margin-bottom: 1rem;
@@ -313,7 +313,7 @@ main {
   border: none;
   font-size: 1.2rem;
   font-weight: bold;
-  color: black;
+  color: red;
   cursor: pointer;
 }
 
@@ -321,7 +321,7 @@ main {
 .botao-destaque , #limparCarrinho {
   display: inline-block;
   margin-top: 1rem;
-  background-color: black;
+  background-color: orange;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
@@ -330,8 +330,8 @@ main {
   border: none;
 }
 
-.botao-destaque:hover {
-  background-color: black;
+.botao-destaque:hover, #limparCarrinho:hover {
+  background-color: darkorange;
 }
 
 /* Estilo para o contêiner de notificações */

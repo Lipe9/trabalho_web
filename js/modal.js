@@ -14,7 +14,7 @@ function abrirModalProduto(produto) {
   modalNome.textContent = produto.nome;
   modalPreco.textContent = `R$ ${produto.preco}`;
   modalDetails.textContent = produto.details;
-  modalProduto.style.display = 'block';
+  modalProduto.style.display = 'flex';
 }
 
 // Função para fechar o modal do produto
@@ -59,5 +59,5 @@ btnComprarAgora.addEventListener('click', () => {
   const imagem = modalImagem.src;
   adicionarAoCarrinho(nome, preco, imagem);
   fecharModalProdutoFunc();
-  abrirCarrinho();
+  window.location.href = 'comprar.html';
 });
