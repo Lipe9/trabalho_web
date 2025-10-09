@@ -10,8 +10,8 @@ function salvarCarrinho() {
 }
 
 // Função para adicionar um produto ao carrinho
-function adicionarAoCarrinho(produto, preco, imagem) {
-  carrinho.push({ produto, preco, imagem });
+function adicionarAoCarrinho(produto, preco, imagem, opcoes = {}) {
+  carrinho.push({ produto, preco, imagem, opcoes });
   salvarCarrinho();
   atualizarContadorCarrinho();
   atualizarMiniCarrinho();
@@ -48,10 +48,23 @@ function atualizarMiniCarrinho() {
   let total = 0;
 
   carrinho.forEach((item, index) => {
+    let opcoesTexto = '';
+    if (item.opcoes && Object.keys(item.opcoes).length > 0) {
+      opcoesTexto = '<br><small>';
+      for (const [key, value] of Object.entries(item.opcoes)) {
+        if (Array.isArray(value)) {
+          opcoesTexto += `${key}: ${value.join(', ')}; `;
+        } else {
+          opcoesTexto += `${key}: ${value}; `;
+        }
+      }
+      opcoesTexto += '</small>';
+    }
+
     const li = document.createElement('li');
     li.innerHTML = `
       <img src="${item.imagem}" alt="${item.produto}" width="50" height="50" style="border-radius: 5px; margin-right: 10px;">
-      <span>${item.produto}</span>
+      <span>${item.produto}${opcoesTexto}</span>
       <span>R$ ${item.preco.toFixed(2)}</span>
       <button onclick="removerItemDoCarrinho(${index})" style="margin-left: 10px; color: red; background: none; border: none; font-size: 16px;">X</button>
     `;

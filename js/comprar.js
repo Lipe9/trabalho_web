@@ -54,21 +54,24 @@ function populateOrderSummary() {
     const totalPrice = document.getElementById('total-price');
     let total = 0;
 
-    // Group items by product
-    const grouped = {};
-    cart.forEach(item => {
-        if (!grouped[item.produto]) {
-            grouped[item.produto] = { name: item.produto, price: item.preco, quantity: 0 };
-        }
-        grouped[item.produto].quantity++;
-    });
-
     orderItems.innerHTML = '';
-    Object.values(grouped).forEach(item => {
+    cart.forEach(item => {
         const li = document.createElement('li');
-        li.innerHTML = `<span>${item.name} x${item.quantity}</span><span>R$ ${(item.price * item.quantity).toFixed(2)}</span>`;
+        let itemText = `${item.produto}`;
+        if (item.opcoes && Object.keys(item.opcoes).length > 0) {
+            const options = [];
+            for (const [key, value] of Object.entries(item.opcoes)) {
+                if (Array.isArray(value)) {
+                    options.push(`${key}: ${value.join(', ')}`);
+                } else {
+                    options.push(`${key}: ${value}`);
+                }
+            }
+            itemText += ` (${options.join('; ')})`;
+        }
+        li.innerHTML = `<span>${itemText}</span><span>R$ ${item.preco.toFixed(2)}</span>`;
         orderItems.appendChild(li);
-        total += item.price * item.quantity;
+        total += item.preco;
     });
 
     totalPrice.textContent = `R$ ${total.toFixed(2)}`;

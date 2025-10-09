@@ -183,6 +183,27 @@
   }
 }
 
+/* Media query para mobile (largura máxima 768px) para filtros roláveis horizontalmente */
+@media (max-width: 768px) {
+  .filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Para scroll suave no iOS */
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: orange transparent; /* Para Firefox */
+  }
+  .filters::-webkit-scrollbar {
+    height: 6px;
+  }
+  .filters::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .filters::-webkit-scrollbar-thumb {
+    background: orange;
+    border-radius: 3px;
+  }
+}
+
 /* Estilo para o modal do produto */
 .modal-produto {
   position: fixed;
@@ -232,10 +253,76 @@
 }
 
 .modal-details {
-  font-size: 2rem;
+  font-size: 1rem;
   color: #333;
   margin-bottom: 20px;
   max-width: 600px;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+/* Container for product options */
+#modalOptions {
+  margin: 15px 0;
+  text-align: left;
+}
+
+#modalOptions .variation {
+  margin-bottom: 15px;
+}
+
+#modalOptions label {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #333;
+}
+
+#modalOptions select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#modalOptions input[type="checkbox"] {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#modalOptions label > input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Styles for option buttons */
+.options-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.option-btn {
+  background: #f0f0f0;
+  color: #333;
+  border: 2px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.option-btn:hover {
+  background: #e0e0e0;
+  border-color: orange;
+}
+
+.option-btn.selected {
+  background: orange;
+  color: white;
+  border-color: orange;
 }
 
 .modal-buttons {
@@ -299,5 +386,109 @@
   }
   .modal-details {
     font-size: 1rem;
+  }
+}
+
+/* Media query para telas muito pequenas (celulares pequenos) */
+@media (max-width: 480px) {
+  .produtos {
+    padding: 20px 10px;
+  }
+
+  .search-filter-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  #search-bar {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .filters {
+    justify-content: center;
+  }
+
+  .filter-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .icon-cards {
+    gap: 15px;
+  }
+
+  .icon-card {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-card i {
+    font-size: 1.8rem;
+  }
+
+  .icon-card p {
+    font-size: 0.8rem;
+  }
+
+  .produtos-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+
+  .card-produto {
+    padding: 8px;
+  }
+
+  .card-produto img {
+    height: 180px;
+  }
+
+  .card-produto h3 {
+    font-size: 1.1rem;
+    margin: 10px 0 3px;
+  }
+
+  .card-produto .preco {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .btn-comprar {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    padding: 15px;
+    max-width: 98%;
+  }
+
+  .modal-img {
+    height: 180px;
+  }
+
+  .modal-nome {
+    font-size: 1.3rem;
+  }
+
+  .modal-preco {
+    font-size: 1.1rem;
+  }
+
+  .modal-details {
+    font-size: 0.9rem;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-modal {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 }

@@ -453,11 +453,28 @@ main {
 #produto,#home{
   min-height: 100vh;
 }
-  /* Estilo para o contador do carrinho */
+/* Estilo para o link do carrinho */
+.carrinho-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Estilo para o contador do carrinho */
 .cart-count, #cart-count-mobile {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: orange;
   color: white;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
   /* Responsividade para contato */
@@ -502,6 +519,198 @@ main {
     justify-content: center;
   }
 }
+
+/* Media query para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  /* Ajusta o cabeçalho para telas pequenas */
+  header {
+    height: 80px;
+    padding: 0.5rem;
+  }
+
+  .logo-img {
+    width: 30%;
+  }
+
+  .hamburger {
+    margin: 5px;
+    width: 35px;
+    height: 20px;
+  }
+
+  .hamburger span {
+    height: 2px;
+  }
+
+  .hamburger span:nth-child(1) {
+    top: -2px;
+  }
+
+  .hamburger span:nth-child(2) {
+    top: 6px;
+  }
+
+  .hamburger span:nth-child(3) {
+    top: 14px;
+  }
+
+  .mobile-menu {
+    top: 80px;
+    font-size: 1rem;
+    min-width: 40%;
+  }
+
+  .mobile-menu a {
+    padding: 0.7rem 0;
+  }
+
+  /* Ajusta seções para telas pequenas */
+  #home, #produto, #sobre, #contato {
+    min-height: 90vh;
+    padding: 1rem 0.5rem;
+  }
+
+  .hero {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-hero {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .sobre-container {
+    gap: 1rem;
+  }
+
+  .sobre-intro, .sobre-missao, .sobre-historia {
+    padding: 1rem;
+  }
+
+  .sobre-intro h1, .sobre-missao h2, .sobre-historia h2 {
+    font-size: 1.5rem;
+  }
+
+  .sobre-info {
+    gap: 1rem;
+  }
+
+  .horario-funcionamento, .formas-pagamento {
+    padding: 1rem;
+  }
+
+  .horario-funcionamento h2, .formas-pagamento h2 {
+    font-size: 1.3rem;
+  }
+
+  .contato-container {
+    gap: 1rem;
+  }
+
+  .contato-info, .contato-form {
+    padding: 1rem;
+  }
+
+  .contato-info h2, .contato-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .contato-info h3 {
+    font-size: 1rem;
+  }
+
+  .contato-form input, .contato-form textarea {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .contato-form .enviar {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Ajusta rodapé para telas pequenas */
+  #rodape {
+    padding: 2rem 0.5rem 1rem;
+  }
+
+  .rodape-container {
+    gap: 1rem;
+  }
+
+  .rodape-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .rodape-section p {
+    font-size: 0.8rem;
+  }
+
+  .formas-pagamento-rodape span {
+    font-size: 1.2rem;
+  }
+
+  #rodape .redes-sociais a {
+    font-size: 1.2em;
+  }
+
+  /* Ajusta modal do carrinho */
+  .mini-carrinho {
+    top: 100px;
+    right: 10px;
+    width: 280px;
+    padding: 0.5rem;
+  }
+
+  .mini-carrinho h3 {
+    font-size: 1rem;
+  }
+
+  .item-carrinho img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .fechar-carrinho {
+    top: 5px;
+    right: 10px;
+    font-size: 1rem;
+  }
+
+  .botao-destaque, #limparCarrinho {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Ajusta notificações */
+  #notificacao-container {
+    top: 100px;
+    right: 10px;
+  }
+
+  .notificacao {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 960px){
+  nav{
+    align-items: center;
+    justify-content: space-evenly;
+  }
+ 
+} 
+
+
 
 /* Estilo para o modal do mini carrinho */
 .mini-carrinho {

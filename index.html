@@ -33,7 +33,8 @@
   <a href="#sobre">Sobre</a>
   <a href="#contato">Contato</a>
   <a href="#carrinho" class="carrinho-link">
-    Carrinho <span id="cart-count" class="cart-count"> 0</span></a>
+    <i class="fas fa-shopping-cart"></i> <span id="cart-count" class="cart-count">0</span>
+  </a>
 </a>
 </nav>
   <!-- Botão hambúrguer para abrir menu mobile -->
@@ -52,8 +53,8 @@
   <a href="#sobre">Sobre</a>
   <a href="#contato">Contato</a>
   <a href="#carrinho" class="carrinho-link">
-    Carrinho <span id="cart-count-mobile" class="cart-count"> 0</span>
-</a>
+    <i class="fas fa-shopping-cart"></i> <span id="cart-count-mobile" class="cart-count">0</span>
+  </a>
 </div>
 <!-- Conteúdo principal da página -->
 <main>
@@ -77,52 +78,216 @@
         <button class="filter-btn active" data-filter="todos">Todos</button>
         <button class="filter-btn" data-filter="comida">Comida</button>
         <button class="filter-btn" data-filter="bebida">Bebida</button>
+        <button class="filter-btn" data-filter="doces">Doces</button>
+        <button class="filter-btn" data-filter="sorvete">Sorvete</button>
+        <button class="filter-btn" data-filter="combo">Combos</button>
       </div>
     </div>
     <!-- Cards de ícones para filtrar por categoria -->
     <div class="icon-cards">
       <div class="icon-card" data-category="comida">
-        <i class="fas fa-utensils"></i>
+        <i class="fas fa-hamburger"></i>
         <p>Comida</p>
       </div>
       <div class="icon-card" data-category="bebida">
         <i class="fas fa-coffee"></i>
         <p>Bebida</p>
       </div>
+      <div class="icon-card" data-category="doces">
+        <i class="fas fa-cookie"></i>
+        <p>Doces</p>
+      </div>
+      <div class="icon-card" data-category="sorvete">
+        <i class="fas fa-ice-cream"></i>
+        <p>Sorvete</p>
+      </div>
     </div>
   <!-- Container para os cards de produtos -->
   <div class="produtos-container">
     <!-- Card de produto -->
-    <div class="card-produto" data-category="comida" data-details="Delicioso hambúrguer fresco com ingredientes selecionados, perfeito para uma refeição rápida e saborosa.">
+    <div class="card-produto" data-category="comida" data-details="Hambúrguer artesanal com carne bovina 180g, queijo cheddar, alface, tomate e molho especial. Perfeito para uma refeição rápida e deliciosa." data-variations='[{"type": "checkbox", "name": "Ingredientes Extras", "options": ["Carne Extra (+R$5)", "Bacon (+R$3)", "Queijo Extra (+R$2)"]}, {"type": "checkbox", "name": "Remover Ingredientes", "options": ["Sem Tomate", "Sem Alface", "Sem Molho"]}]'>
       <img src="img/IMG-20251006-WA0000.jpg" alt="hambúrguer" data-imagem="img/IMG-20251006-WA0000.jpg">
       <h3>Hambúrguer</h3>
-      <p class="preco">R$9,90</p>
-      <button class="btn-comprar" data-nome="Hambúrguer" data-preco="9.90" data-imagem="img/IMG-20251006-WA0000.jpg"> Comprar </button>
+      <p class="preco">R$15,90</p>
+      <button class="btn-comprar" data-nome="Hambúrguer" data-preco="15.90" data-imagem="img/IMG-20251006-WA0000.jpg"> Comprar </button>
     </div>
 
     <!-- Card de produto -->
-
-    <div class="card-produto" data-category="comida" data-details="Taco mexicano autêntico, recheado com carne temperada, queijo e vegetais frescos. Uma explosão de sabores!">
+    <div class="card-produto" data-category="comida" data-details="Taco mexicano autêntico com carne moída temperada, queijo ralado, alface fresca e molho picante. Uma opção leve e saborosa." data-variations='[{"type": "checkbox", "name": "Ingredientes Extras", "options": ["Queijo Extra (+R$2)", "Molho Picante (+R$1)"]}, {"type": "checkbox", "name": "Remover Ingredientes", "options": ["Sem Alface", "Sem Molho"]}]'>
       <img src="img/IMG-20251006-WA0002.jpg" alt="Taco" data-imagem="img/IMG-20251006-WA0002.jpg">
       <h3>Taco</h3>
-      <p class="preco">R$9,90</p>
+      <p class="preco">R$12,50</p>
 
-      <button class="btn-comprar" data-nome="Taco" data-preco="9.90" data-imagem="img/IMG-20251006-WA0002.jpg">Comprar</button>
+      <button class="btn-comprar" data-nome="Taco" data-preco="12.50" data-imagem="img/IMG-20251006-WA0002.jpg">Comprar</button>
     </div>
 
     <!-- Card de produto -->
-    <div class="card-produto" data-category="bebida" data-details="Refrigerante gelado, refrescante e perfeito para acompanhar suas refeições. Disponível em várias opções.">
+    <div class="card-produto" data-category="bebida" data-details="Refrigerante Coca-Cola 350ml, gelado e refrescante. Ideal para acompanhar suas refeições." data-variations='[{"type": "checkbox", "name": "Tipo", "options": ["Normal", "Zero"]}]'>
       <img src="img/IMG-20251006-WA0001.jpg" alt="Refri" data-imagem="img/IMG-20251006-WA0001.jpg">
       <h3>Coca Cola</h3>
-      <p class="preco">R$9,90</p>
-      <button class="btn-comprar" data-nome="Coca Cola" data-preco="9.90" data-imagem="img/IMG-20251006-WA0001.jpg">Comprar</button>
+      <p class="preco">R$5</p>
+      <button class="btn-comprar" data-nome="Coca Cola" data-preco="5" data-imagem="img/IMG-20251006-WA0001.jpg">Comprar</button>
     </div>
     <!-- Card de produto -->
-<div class="card-produto" data-category="bebida" data-details="Café aromático e quente, preparado com grãos selecionados para um despertar perfeito.">
+<div class="card-produto" data-category="bebida" data-details="Café expresso fresco, preparado com grãos selecionados. Uma bebida energética para começar o dia.">
       <img src="img/IMG-20251006-WA0003.jpg" alt="Café" data-imagem="img/IMG-20251006-WA0003.jpg">
       <h3>Café</h3>
-      <p class="preco">R$9,90</p>
-      <button class="btn-comprar" data-nome="Café" data-preco="9.90" data-imagem="img/IMG-20251006-WA0003.jpg">Comprar</button>
+      <p class="preco">R$4,00</p>
+      <button class="btn-comprar" data-nome="Café" data-preco="4.00" data-imagem="img/IMG-20251006-WA0003.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="bebida" data-details="Suco natural de laranja 300ml, feito com frutas frescas. Rico em vitamina C e refrescante.">
+      <img src="img/IMG-20251006-WA0003.jpg" alt="Suco de Laranja" data-imagem="img/IMG-20251006-WA0003.jpg">
+      <h3>Suco de Laranja</h3>
+      <p class="preco">R$7,00</p>
+      <button class="btn-comprar" data-nome="Suco de Laranja" data-preco="7.00" data-imagem="img/IMG-20251006-WA0003.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="bebida" data-details="Leite integral 300ml, gelado e cremoso. Fonte de cálcio e proteínas.">
+      <img src="img/IMG-20251006-WA0003.jpg" alt="Leite" data-imagem="img/IMG-20251006-WA0003.jpg">
+      <h3>Leite</h3>
+      <p class="preco">R$3,50</p>
+      <button class="btn-comprar" data-nome="Leite" data-preco="3.50" data-imagem="img/IMG-20251006-WA0003.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="bebida" data-details="Chá verde orgânico 300ml, antioxidante e relaxante. Perfeito para momentos de pausa.">
+      <img src="img/IMG-20251006-WA0003.jpg" alt="Chá Verde" data-imagem="img/IMG-20251006-WA0003.jpg">
+      <h3>Chá Verde</h3>
+      <p class="preco">R$5,00</p>
+      <button class="btn-comprar" data-nome="Chá Verde" data-preco="5.00" data-imagem="img/IMG-20251006-WA0003.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="bebida" data-details="Água mineral 500ml, pura e hidratante. Essencial para o dia a dia.">
+      <img src="img/IMG-20251006-WA0003.jpg" alt="Água" data-imagem="img/IMG-20251006-WA0003.jpg">
+      <h3>Água</h3>
+      <p class="preco">R$2,50</p>
+      <button class="btn-comprar" data-nome="Água" data-preco="2.50" data-imagem="img/IMG-20251006-WA0003.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="comida" data-details="Pizza marguerita com molho de tomate, queijo mussarela e manjericão fresco. Porção individual.">
+      <img src="img/IMG-20251006-WA0000.jpg" alt="Pizza" data-imagem="img/IMG-20251006-WA0000.jpg">
+      <h3>Pizza</h3>
+      <p class="preco">R$28,00</p>
+      <button class="btn-comprar" data-nome="Pizza" data-preco="28.00" data-imagem="img/IMG-20251006-WA0000.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="comida" data-details="Hot dog tradicional com salsicha, molho de tomate, mostarda e batata palha. Clássico e irresistível.">
+      <img src="img/IMG-20251006-WA0000.jpg" alt="Hot Dog" data-imagem="img/IMG-20251006-WA0000.jpg">
+      <h3>Hot Dog</h3>
+      <p class="preco">R$10,00</p>
+      <button class="btn-comprar" data-nome="Hot Dog" data-preco="10.00" data-imagem="img/IMG-20251006-WA0000.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="comida" data-details="Batata frita crocante, salgada e dourada. Acompanhamento perfeito para qualquer refeição.">
+      <img src="img/IMG-20251006-WA0000.jpg" alt="Batata Frita" data-imagem="img/IMG-20251006-WA0000.jpg">
+      <h3>Batata Frita</h3>
+      <p class="preco">R$8,50</p>
+      <button class="btn-comprar" data-nome="Batata Frita" data-preco="8.50" data-imagem="img/IMG-20251006-WA0000.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="comida" data-details="Salada mista com alface, tomate, cenoura, pepino e molho leve. Opção saudável e fresca.">
+      <img src="img/IMG-20251006-WA0000.jpg" alt="Salada" data-imagem="img/IMG-20251006-WA0000.jpg">
+      <h3>Salada</h3>
+      <p class="preco">R$9,00</p>
+      <button class="btn-comprar" data-nome="Salada" data-preco="9.00" data-imagem="img/IMG-20251006-WA0000.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="comida" data-details="Sanduíche de frango grelhado com alface, tomate e maionese caseira. Leve e saboroso.">
+      <img src="img/IMG-20251006-WA0000.jpg" alt="Sanduíche de Frango" data-imagem="img/IMG-20251006-WA0000.jpg">
+      <h3>Sanduíche de Frango</h3>
+      <p class="preco">R$11,50</p>
+      <button class="btn-comprar" data-nome="Sanduíche de Frango" data-preco="11.50" data-imagem="img/IMG-20251006-WA0000.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="doces" data-details="Delicioso bolo de chocolate, perfeito para adoçar o seu dia.">
+      <img src="img/fundo.jpg" alt="Bolo" data-imagem="img/fundo.jpg">
+      <h3>Bolo de Chocolate</h3>
+      <p class="preco">R$15,00</p>
+      <button class="btn-comprar" data-nome="Bolo de Chocolate" data-preco="15.00" data-imagem="img/fundo.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="doces" data-details="Cupcake fofinho com cobertura de baunilha, ideal para uma sobremesa leve.">
+      <img src="img/fundo.jpg" alt="Cupcake" data-imagem="img/fundo.jpg">
+      <h3>Cupcake de Baunilha</h3>
+      <p class="preco">R$8,00</p>
+      <button class="btn-comprar" data-nome="Cupcake de Baunilha" data-preco="8.00" data-imagem="img/fundo.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="doces" data-details="Brownie denso e chocolateado, uma explosão de sabor.">
+      <img src="img/fundo.jpg" alt="Brownie" data-imagem="img/fundo.jpg">
+      <h3>Brownie</h3>
+      <p class="preco">R$10,00</p>
+      <button class="btn-comprar" data-nome="Brownie" data-preco="10.00" data-imagem="img/fundo.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="doces" data-details="Torta de frutas frescas, leve e refrescante.">
+      <img src="img/fundo.jpg" alt="Torta" data-imagem="img/fundo.jpg">
+      <h3>Torta de Frutas</h3>
+      <p class="preco">R$18,00</p>
+      <button class="btn-comprar" data-nome="Torta de Frutas" data-preco="18.00" data-imagem="img/fundo.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="doces" data-details="Pudim cremoso de leite condensado, clássico e irresistível.">
+      <img src="img/fundo.jpg" alt="Pudim" data-imagem="img/fundo.jpg">
+      <h3>Pudim</h3>
+      <p class="preco">R$12,00</p>
+      <button class="btn-comprar" data-nome="Pudim" data-preco="12.00" data-imagem="img/fundo.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="sorvete" data-details="Sorvete cremoso de baunilha, refrescante e delicioso.">
+      <img src="img/logo.jpg" alt="Sorvete" data-imagem="img/logo.jpg">
+      <h3>Sorvete de Baunilha</h3>
+      <p class="preco">R$12,00</p>
+      <button class="btn-comprar" data-nome="Sorvete de Baunilha" data-preco="12.00" data-imagem="img/logo.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="sorvete" data-details="Sorvete rico em chocolate, perfeito para os amantes de cacau.">
+      <img src="img/logo.jpg" alt="Sorvete" data-imagem="img/logo.jpg">
+      <h3>Sorvete de Chocolate</h3>
+      <p class="preco">R$12,00</p>
+      <button class="btn-comprar" data-nome="Sorvete de Chocolate" data-preco="12.00" data-imagem="img/logo.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="sorvete" data-details="Sorvete de morango fresco, leve e frutado.">
+      <img src="img/logo.jpg" alt="Sorvete" data-imagem="img/logo.jpg">
+      <h3>Sorvete de Morango</h3>
+      <p class="preco">R$12,00</p>
+      <button class="btn-comprar" data-nome="Sorvete de Morango" data-preco="12.00" data-imagem="img/logo.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="sorvete" data-details="Sorvete de pistache, com sabor único e cremoso.">
+      <img src="img/logo.jpg" alt="Sorvete" data-imagem="img/logo.jpg">
+      <h3>Sorvete de Pistache</h3>
+      <p class="preco">R$14,00</p>
+      <button class="btn-comprar" data-nome="Sorvete de Pistache" data-preco="14.00" data-imagem="img/logo.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="sorvete" data-details="Sorvete de limão, refrescante e cítrico.">
+      <img src="img/logo.jpg" alt="Sorvete" data-imagem="img/logo.jpg">
+      <h3>Sorvete de Limão</h3>
+      <p class="preco">R$12,00</p>
+      <button class="btn-comprar" data-nome="Sorvete de Limão" data-preco="12.00" data-imagem="img/logo.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="combo" data-details="Combo especial: Hambúrguer + Batata Frita + Coca Cola. Uma refeição completa e deliciosa.">
+      <img src="img/IMG-20251006-WA0000.jpg" alt="Combo 1" data-imagem="img/IMG-20251006-WA0000.jpg">
+      <h3>Combo Hambúrguer</h3>
+      <p class="preco">R$25,00</p>
+      <button class="btn-comprar" data-nome="Combo Hambúrguer" data-preco="25.00" data-imagem="img/IMG-20251006-WA0000.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="combo" data-details="Combo irresistível: Hot Dog + Sorvete de Baunilha + Chá Verde. Doce e salgado em um só.">
+      <img src="img/IMG-20251006-WA0000.jpg" alt="Combo 2" data-imagem="img/IMG-20251006-WA0000.jpg">
+      <h3>Combo Hot Dog</h3>
+      <p class="preco">R$22,00</p>
+      <button class="btn-comprar" data-nome="Combo Hot Dog" data-preco="22.00" data-imagem="img/IMG-20251006-WA0000.jpg">Comprar</button>
+    </div>
+    <!-- Card de produto -->
+    <div class="card-produto" data-category="combo" data-details="Combo saudável: Salada + Suco de Laranja + Café. Leve e energizante.">
+      <img src="img/IMG-20251006-WA0000.jpg" alt="Combo 3" data-imagem="img/IMG-20251006-WA0000.jpg">
+      <h3>Combo Saudável</h3>
+      <p class="preco">R$18,00</p>
+      <button class="btn-comprar" data-nome="Combo Saudável" data-preco="18.00" data-imagem="img/IMG-20251006-WA0000.jpg">Comprar</button>
     </div>
   </div>
 </section>
