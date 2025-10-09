@@ -83,7 +83,7 @@ function abrirModalProduto(produto) {
   modalProduto.style.display = 'flex';
 }
 
-// Function to update modal price based on selected extras
+// Function to update modal price based on selected extras and quantity
 function updateModalPrice() {
   const basePrice = parseFloat(modalPreco.dataset.basePrice.replace(',', '.'));
   let extraPrice = 0;
@@ -91,7 +91,9 @@ function updateModalPrice() {
   selectedButtons.forEach(button => {
     extraPrice += parseFloat(button.dataset.price || 0);
   });
-  const totalPrice = basePrice + extraPrice;
+  const quantitySelect = document.querySelector('#modalOptions select[name="Quantidade"]');
+  const quantity = quantitySelect ? parseInt(quantitySelect.value) || 1 : 1;
+  const totalPrice = (basePrice + extraPrice) * quantity;
   modalPreco.textContent = `R$ ${totalPrice.toFixed(2).replace('.', ',')}`;
 }
 
